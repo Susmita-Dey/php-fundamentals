@@ -22,9 +22,20 @@
 </html>
 
 <?php
-echo "{$_POST["username"]} <br>";
-echo "{$_POST["password"]} <br>";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if form fields are set
+    if (isset($_POST["username"]) && isset($_POST["password"])) {
+        echo htmlspecialchars($_POST["username"]) . "<br>";
+        echo htmlspecialchars($_POST["password"]) . "<br>";
+    } else {
+        echo "Please fill out all fields.<br>";
+    }
+}
+?>
 
+<?php
+// echo "{$_POST["username"]} <br>";
+// echo "{$_POST["password"]} <br>";
 // $_GET = Data is appended to the url
 // NOT SECURE
 // char limit 
