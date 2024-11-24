@@ -10,14 +10,14 @@
 <body>
     <h1>Hello World</h1>
     <?php
-    echo "I love pizza <br/>";
-    echo "It's very tasty <br/><br/>";
-    // This is a comment
-    /*  This 
-        is a
-        multi-line 
-        comment 
-    */
+        echo "I love pizza <br/>";
+        echo "It's very tasty <br/><br/>";
+        // This is a comment
+        /*  This 
+            is a
+            multi-line 
+            comment 
+        */
     ?>
     <button>Order Pizza</button>
 </body>
