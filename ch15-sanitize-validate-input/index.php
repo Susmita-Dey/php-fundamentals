@@ -7,10 +7,10 @@
 </head>
 <body>
     <form action="index.php" method="post">
-        <input type="text" name="username"><br>
-        <input type="text" name="age"><br>
-        <input type="text" name="email"><br>
-        <input type="submit" name="login" value="login">
+        <input type="text" name="username" placeholder="Name"><br>
+        <input type="text" name="age" placeholder="Age"><br>
+        <input type="text" name="email" placeholder="Email"><br>
+        <input type="submit" name="login" value="login"><br>
     </form>
 </body>
 </html>
@@ -26,8 +26,8 @@ if (isset($_POST["login"])) {
 
     $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
 
-    echo 'Hello {$username}';
-    echo 'You are {$age} years old';
-    echo "Your email is: {$email}";
+    echo "Hello {$username}<br>";
+    echo "You are {$age} years old<br>";
+    echo "Your email is: {$email}<br>";
 }
 ?>

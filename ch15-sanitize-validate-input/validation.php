@@ -6,11 +6,11 @@
     <title>Validate Input</title>
 </head>
 <body>
-    <form action="index.php" method="post">
-        <input type="text" name="username"><br>
-        <input type="text" name="age"><br>
-        <input type="text" name="email"><br>
-        <input type="submit" name="login" value="login">
+    <form action="validation.php" method="post">
+    <input type="text" name="username" placeholder="Name"><br>
+        <input type="text" name="age" placeholder="Age"><br>
+        <input type="text" name="email" placeholder="Email"><br>
+        <input type="submit" name="login" value="login"><br>
     </form>
 </body>
 </html>
@@ -20,17 +20,17 @@ if (isset($_POST["login"])) {
     $age = filter_input(INPUT_POST, "age",FILTER_VALIDATE_INT);
     
     if (empty($age)) {
-        echo "That number wasn't valid!";
+        echo "That number wasn't valid!<br>";
     } else {
-        echo "You are {$age} years old!";
+        echo "You are {$age} years old!<br>";
     }
     
     $email = filter_input(INPUT_POST, "email",FILTER_VALIDATE_EMAIL);
     
     if (empty($email)) {
-        echo "That email wasn't valid!";
+        echo "That email wasn't valid!<br>";
     } else {
-        echo "You email is: {$email}";
+        echo "You email is: {$email}<br>";
     }
 }
 ?>
